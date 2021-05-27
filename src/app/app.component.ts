@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-first-app';
+  userName = '';
+
+  setUserName(text: string) {
+    this.userName = text;
+    console.log(this.userName)
+  }
 }
