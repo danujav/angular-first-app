@@ -1,0 +1,49 @@
+.main-wrap {
+  width: 300px;
+  height: 300px;
+  border: 1px solid blue;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+}
+
+.title {
+  font-family: AnjaliOldLipi;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+.input-text {
+  width: 100%;
+  height: 27px;
+  border-radius: 4px;
+  background: none;
+  border: 1px solid blueviolet;
+}
+.input-text:focus {
+  outline: none;
+}
+.btn {
+  width: 100%;
+  height: 35px;
+  background: darkslateblue;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.invalid {
+  background-color: dimgrey;
+  cursor: not-allowed;
+}
+.alert {
+  color: white;
+  background-color: orangered;
+  padding: 8px 10px;
+  border-radius: 8px;
+  padding: 5px 0;
+}

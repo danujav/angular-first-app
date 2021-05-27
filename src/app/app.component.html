@@ -13,3 +13,38 @@
 <!--<input type="text" [(ngModel)]="userName">
 {{userName}}-->
 
+<!--///////////////////////////////////////////////////////////-->
+
+<div class="main-wrap">
+  <p class="title">Sign in</p>
+  <hr>
+
+
+
+  <!--Now we are note provide our text fields value like this. cause we want to validate them-->
+
+ <!-- <input type="email"  class="input-text" [(ngModel)]="email">
+  <br>
+  <br>
+  <input type="password" class="input-text" [(ngModel)]="password">
+  <input type="submit" value="login" class="btn" (click)="login()">-->
+
+  <!--we use two types of for that. (1. template driven from, 2. reactive form-->
+  <!-- reactive form-->
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+    <input formControlName="email" type="email"  class="input-text">
+    <p class="alert" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+      Email is required
+    </p>
+    <br>
+
+    <input formControlName="password" type="password"  class="input-text">
+    <p class="alert" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+      Password is required
+    </p>
+    <input [disabled]="loginForm.invalid" type="submit" value="login" class="btn {{loginForm.invalid?'invalid' : ''}}">
+
+  </form>
+
+</div>
